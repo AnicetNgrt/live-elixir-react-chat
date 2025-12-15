@@ -38,6 +38,11 @@ done
 echo "Docker services are ready!"
 echo ""
 
+echo "Installing Elixir build tools..."
+mix local.hex --force
+mix local.rebar --force
+
+echo ""
 echo "Installing backend dependencies..."
 cd backend
 mix deps.get
